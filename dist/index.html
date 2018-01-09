@@ -8,11 +8,42 @@
 </head>
 <body>
 
-    <div class="container-fluid gradience-overlay">
-        <div class="menu">fd</div>
-        <div class="row"> 
-            <h1>Text Analyzer</h1>
-        </div>
+    <nav class="menu"></nav>
+    <div class="container gradience-overlay">
+        <header>
+            <div class="row">
+                <div class="col">
+                    <h1 class="typing">Text Analyzer()</h1>
+                    <p>Paste in or type your text below to some statistics.</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <output id="js-word-count" class="form-control">100</output>
+                        <label>Word Count</label>
+                    </div>
+                    <div class="col">
+                        <output id="js-unique-count" class="form-control">100</output>
+                        <label>Unique Word Count</label>
+                    </div>
+                    <div class="col">
+                        <output id="js-average-length" class="form-control">100</output>
+                        <label>Average Word Length</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <textarea id="js-user-input" class="form-control" id="" rows="20" placeholder="Please enter some text and we will remove non-alpanumeric characters and spaces."></textarea>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+    <div class="container">
+        <input id="js-submit" type="submit" value="Analyze">
     </div>
 
 <script type="text/javascript" src="app.bundle.js"></script></body>

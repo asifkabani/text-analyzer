@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "description",
   "main": "app.js",
+  "quokka": {
+    "babel": true
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config webpack.dev.js",

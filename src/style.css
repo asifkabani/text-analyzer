@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'Menlo';
-    src:  url('./Menlo-Regular.woff') format('woff');
+    src:  url('./Menlo-Regular.woff') format('woff'), url('./Menlo-Regular.ttf') format('truetype');
 }
 
 body {
     background-color: #3f0a1d;
+    font-family: "Menlo", sans-serif;
 }
 
 .gradience-overlay:before {
@@ -29,13 +30,130 @@ body {
     position: absolute;
     top: 25px;
     right: 25px;
-    width: 96px;
-    height: 96px;
+    width: 50px;
+    height: 50px;
     z-index: 2;
     background: url('./menu-icon.png') no-repeat;
+    background-size: cover;
+}
+
+header, main {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    margin-top: 9rem;
+    text-align: center;
+    font-family: "Menlo";
+    color: #ffffff;
 }
 
 h1 {
-    position: relative;
-    color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .25em solid #f92672; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite;
+
+    width: 420px;
+    font-size: 2.75rem;
 }
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 420px }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffffff; }
+}
+
+p {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+}
+
+.form-control {
+    font-size: 1rem;
+}
+
+output.form-control {
+    font-size: 2rem;
+    background: #5c0e2b;
+    border: none;
+    color: #f92672;
+    text-align: center;
+}
+
+input[type=submit] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    z-index: 1;
+    background-color: #f92672;
+    border: none;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    color: #ffffff;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.alert-danger {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+/* Media Queries */
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    input[type=submit] {
+        position: relative;
+        height: 10rem;
+        z-index: 1;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
