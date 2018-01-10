@@ -21,61 +21,61 @@ console.log(removeNonAlpha(' hi 4545^$@&&%% hi kfsjdlfjsdflkds hello hello%$#%*^
 
 // Create an array from the clean strings.
 const cleanStrArr = (string) => string.split(" ");
-console.log(cleanStrArr('hi 4545 hi kfsjdfkd hello hello'))
-
+console.log(cleanStrArr('hi 4545 hi kfsjdfkd hello hello'));
 
 // Create function to get the average length of a word.
 const averageWordLength = (string) => {
-    let stringArr = string.split(" ");
+    let stringArr = cleanStrArr(string);
     let wordCount = stringArr.length;
-    let countAll = stringArr.sort().join('').length;
-    let getAverage = countAll / wordCount;
-    return getAverage.toFixed(1);
+    let characterCount = stringArr.sort().join('').length;
+    let getAverage = (characterCount / wordCount).toFixed(2);
+    return getAverage;
 };
-console.log(averageWordLength('hi 4545 hi kfsjdfkd hello hello'))
-
-const testArr = 'hi 4545 hi kfsjdfkd hello hello';
-console.log(testArr)
-// const testArrRed = testArr.reduce((total, amount) => total + amount);
-console.log(typeof testArr.split(" "));
-
+console.log(averageWordLength('hi 4545 hi kfsjdfkd hello hello'));
 
 // Create function to get unique word count. A unique word is one that is not repeated.
-const uniqueWordCount = (string) => {
-    let resultArr = [];
-    let origArr = cleanStrArr(string);
-    origArr.forEach(function(element, index) {
-        if (origArr.indexOf(element, index + 1) > -1) {
-            if (resultArr.indexOf(element) === -1) {
-                resultArr.push(element);
-            }
-        }
-    });
-    return origArr.length - resultArr.length;
+const uniqueWordCount = (array) => {
+    let newArray = [];
+    array.forEach((item, index) =>
+        console.log(item + index)
+    );
+//     let tempArr = array.slice();
+//     console.log(tempArr);
+//     let resultArr = [];
+//     let origArr = cleanStrArr(string);
+//     origArr.forEach(function(element, index) {
+//         if (origArr.indexOf(element, index + 1) > -1) {
+//             if (resultArr.indexOf(element) === -1) {
+//                 resultArr.push(element);
+//             }
+//         }
+//     });
+//     return origArr.length - resultArr.length;
 };
+console.log(uniqueWordCount(["hi", "4545", "hi", "kfsjdfkd", "hello", "hello"]));
 
 // If there is valid input, then process the input.
 const runAnalyzer = (value) => {
-    let cleanStr = removeNonAlpha(value);
-    let getWordCount = cleanStrArr(cleanStr).length;
-    let getAverageLength = averageWordLength(cleanStr);
-    let getUniqueCount = uniqueWordCount(cleanStr);
+    // let cleanStr = removeNonAlpha(value);
+    // let getWordCount = cleanStrArr(cleanStr).length;
+    // let getAverageLength = averageWordLength(cleanStr);
+    // let getUniqueCount = uniqueWordCount(cleanStr);
 
     // Show the results.
-    let wordCountInput = document.getElementById('js-word-count');
-    wordCountInput.value = getWordCount;
-    let averageLengthInput = document.getElementById('js-average-length');
-    averageLengthInput.value = `${getAverageLength} characters`;
-    let uniqueCountInput = document.getElementById('js-unique-count');
-    uniqueCountInput.value = `${getUniqueCount}`;
+    // let wordCountInput = document.getElementById('js-word-count');
+    // wordCountInput.value = getWordCount;
+    // let averageLengthInput = document.getElementById('js-average-length');
+    // averageLengthInput.value = `${getAverageLength} characters`;
+    // let uniqueCountInput = document.getElementById('js-unique-count');
+    // uniqueCountInput.value = `${getUniqueCount}`;
 };
 
 // If there is no input, run the error function.
 const error = (el) => {
-    if (el.className !== 'alert-danger') {
-        el.className += ' alert-danger';
-        el.setAttribute('placeholder', 'No input received. Please enter some text.');
-    }
+    // if (el.className !== 'alert-danger') {
+    //     el.className += ' alert-danger';
+    //     el.setAttribute('placeholder', 'No input received. Please enter some text.');
+    // }
     // el.setAttribute('placeholder', 'No input received. Please enter some text.');
     // el.className += ' alert-danger';
     // el.addEventListener('click', () => {
@@ -102,7 +102,7 @@ const error = (el) => {
 
 // Handle form submit
 const handleSubmit = () => {
-    // console.log(submitButEl);
+    console.log(submitButEl);
     // submitButEl.addEventListener()
     // submitButEl.click(checkEmpty);
     // submitButEl.addEventListener('click', checkEmpty);
