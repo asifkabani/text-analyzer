@@ -34,77 +34,49 @@ const averageWordLength = (string) => {
 console.log(averageWordLength('hi 4545 hi kfsjdfkd hello hello'));
 
 // Create function to get unique word count. A unique word is one that is not repeated.
-const uniqueWordCount = (array) => {
-    let newArray = [];
-    array.forEach((item, index) =>
-        console.log(item + index)
-    );
-//     let tempArr = array.slice();
-//     console.log(tempArr);
-//     let resultArr = [];
-//     let origArr = cleanStrArr(string);
-//     origArr.forEach(function(element, index) {
-//         if (origArr.indexOf(element, index + 1) > -1) {
-//             if (resultArr.indexOf(element) === -1) {
-//                 resultArr.push(element);
-//             }
-//         }
-//     });
-//     return origArr.length - resultArr.length;
-};
-console.log(uniqueWordCount(["hi", "4545", "hi", "kfsjdfkd", "hello", "hello"]));
+// const uniqueWordCount = (string) => {
+    // let temp = [];
+    // array.forEach((element,index) => {
+    //     if (array.indexOf(element, index + 1) > -1) {
+    //         console.log(index);
+    //         // if (temp.indexOf(element) === -1) {
+    //         //     temp.push(element);
+    //         // }
+    //     }    
+    // });
+    // let resultArr = [];
+    // let origArr = cleanStrArr(string);
+    // origArr.forEach(function(element, index) {
+    //     if (origArr.indexOf(element, index + 1) > -1) {
+    //         if (resultArr.indexOf(element) === -1) {
+    //             resultArr.push(element);
+    //         }
+    //     }
+    // });
+    // return origArr.length - resultArr.length;
+// };
+// console.log(uniqueWordCount(["hi", "4545", "hi", "kfsjdfkd", "hello", "hello"]));
 
 // If there is valid input, then process the input.
 const runAnalyzer = (value) => {
-    // let cleanStr = removeNonAlpha(value);
-    // let getWordCount = cleanStrArr(cleanStr).length;
-    // let getAverageLength = averageWordLength(cleanStr);
-    // let getUniqueCount = uniqueWordCount(cleanStr);
-
-    // Show the results.
-    // let wordCountInput = document.getElementById('js-word-count');
-    // wordCountInput.value = getWordCount;
-    // let averageLengthInput = document.getElementById('js-average-length');
-    // averageLengthInput.value = `${getAverageLength} characters`;
-    // let uniqueCountInput = document.getElementById('js-unique-count');
-    // uniqueCountInput.value = `${getUniqueCount}`;
+    alert('passed')
 };
 
-// If there is no input, run the error function.
-const error = (el) => {
-    // if (el.className !== 'alert-danger') {
-    //     el.className += ' alert-danger';
-    //     el.setAttribute('placeholder', 'No input received. Please enter some text.');
-    // }
-    // el.setAttribute('placeholder', 'No input received. Please enter some text.');
-    // el.className += ' alert-danger';
-    // el.addEventListener('click', () => {
-    //     el.classList.remove('alert-danger');
-    // });
+// Check if input is empty.
+const checkEmpty = () => {
+    if (!userInputEl.value) {
+        if (!userInputEl.classList.contains('alert-danger')) {
+            userInputEl.setAttribute('placeholder', 'No input received. Please enter some text.');
+            userInputEl.className += ' alert-danger';
+        }
+    } else {
+        userInputEl.classList.remove('alert-danger');
+        runAnalyzer();
+    }
 };
-
-// Run Text Analyzer
-// const checkEmpty = () => {
-    // console.log(submitButEl)
-    // console.log(userInputEl)
-    // if (!userInputEl.value) {
-    //     error(userInputEl)
-    // }
-    // return runAnalyzer(userInputEl.value);
-    // let userTextEl = document.getElementById('js-user-text');
-    // let userTextVal = userTextEl.value;
-    // if (!userTextVal) {
-    //     error(userTextEl);
-    // } else {
-    //     runAnalyzer(userTextVal);
-    // }
-// };
 
 // Handle form submit
 const handleSubmit = () => {
-    console.log(submitButEl);
-    // submitButEl.addEventListener()
-    // submitButEl.click(checkEmpty);
-    // submitButEl.addEventListener('click', checkEmpty);
+    submitButEl.addEventListener('click', checkEmpty);
 };
 handleSubmit();
