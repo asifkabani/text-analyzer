@@ -58,8 +58,13 @@ console.log(averageWordLength('hi 4545 hi kfsjdfkd hello hello'));
 // console.log(uniqueWordCount(["hi", "4545", "hi", "kfsjdfkd", "hello", "hello"]));
 
 // If there is valid input, then process the input.
-const runAnalyzer = (value) => {
-    alert('passed')
+const runAnalyzer = () => {
+    let cleanStr = removeNonAlpha(userInputEl.value);
+    let getWordCount = cleanStrArr(cleanStr).length;
+    let getAverageLength = averageWordLength(cleanStr);
+
+    wordCountEl.value = getWordCount;
+    averageLengthEl.value = getAverageLength;
 };
 
 // Check if input is empty.
