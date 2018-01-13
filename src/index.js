@@ -63,6 +63,7 @@ const runAnalyzer = () => {
     let getWordCount = cleanStrArr(cleanStr).length;
     let getAverageLength = averageWordLength(cleanStr);
 
+    userInputEl.value = cleanStr;
     wordCountEl.value = getWordCount;
     averageLengthEl.value = getAverageLength;
 };
@@ -85,3 +86,14 @@ const handleSubmit = () => {
     submitButEl.addEventListener('click', checkEmpty);
 };
 handleSubmit();
+
+
+// TESTS
+// When user clicks on icon, show information about web app.
+let navigation = document.getElementById('navigation');
+console.log(navigation)
+// console.log(navigation.style.display = 'block')
+
+/* TODO
+when user enters their text, on analyze, send the value of the 
+*/

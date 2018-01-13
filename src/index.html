@@ -8,13 +8,22 @@
 </head>
 <body>
 
-    <nav class="menu"></nav>
+    <div class="menu"></div>
+    <nav id="navigation" class="slide-in">
+        <button id="js-close" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="close-info">
+            <h2>Text Analyzer</h2>
+            <p>Made by me for this purpose.</p>
+        </div>
+    </nav>
     <div class="container gradience-overlay">
         <header>
             <div class="row">
                 <div class="col">
                     <h1 class="typing">Text Analyzer()</h1>
-                    <p>Paste in or type your text below to some statistics.</p>
+                    <p>Analyze your text in the field below.</p>
                 </div>
             </div>
         </header>
@@ -36,14 +45,16 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <textarea id="js-user-input" class="form-control" id="" rows="20" placeholder="Please enter some text and we will remove non-alpanumeric characters and spaces."></textarea>
+                        <textarea id="js-user-input" class="form-control" id="" rows="6" placeholder="Please enter some text and we will remove non-alpanumeric characters and spaces."></textarea>
                     </div>
                 </div>
             </form>
         </main>
     </div>
     <div class="container">
-        <input id="js-submit" type="submit" value="Analyze">
+        <div class="row">
+            <input id="js-submit" class="btn-sm" type="submit" value="Analyze">    
+        </div>
     </div>
 
 </body>
