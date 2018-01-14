@@ -32,12 +32,13 @@ body {
     right: 25px;
     width: 25px;
     height: 25px;
+    cursor: pointer;
     z-index: 2;
     background: url('./menu-icon.png') no-repeat;
     background-size: cover;
 }
 
-.slide-in {
+.fade-in {
     background: #3f0a1d;
     width: 100vw;
     height: 100vh;
@@ -47,24 +48,19 @@ body {
     z-index: 2;
     transition: background-color 0.5s ease;
     color: #ffffff;
-
-    /* display: none; */
-    opacity: 0.5;
+    display: none;
 }
 
-.slide-in .close {
+.fade-in .close {
     position: absolute;
     top: 35px;
     right: 23px;
     color: #ffffff;
+    text-shadow: none;
     font-size: 3rem;
     padding: 0;
     margin: 0;
     line-height: 0;
-}
-
-.close-info {
-    position: absolute;
 }
 
 header, main {
@@ -77,6 +73,7 @@ header {
     text-align: center;
     font-family: "Menlo";
     color: #ffffff;
+    z-index: 2;
 }
 
 h1 {

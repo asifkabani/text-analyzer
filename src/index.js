@@ -8,6 +8,10 @@ const uniqueCountEl = document.getElementById('js-unique-count');
 const averageLengthEl = document.getElementById('js-average-length');
 const userInputEl = document.getElementById('js-user-input');
 const submitButEl = document.getElementById('js-submit');
+const menuButEl = document.getElementById('js-menu');
+const infoBox = document.getElementById('js-info');
+const closeButEl = document.getElementById('js-close');
+const txtEl = document.getElementById('js-txt');
 
 // Remove non-alphanumerice characters and spaces from user input.
 const removeNonAlpha = (string) => string.toLowerCase().replace(/[^a-z0-9-]+/g, " ").trim();
@@ -66,5 +70,16 @@ const checkEmpty = () => {
 const handleSubmit = () => submitButEl.addEventListener('click', checkEmpty);
 handleSubmit();
 
+// Open menu on click
+const openMenu = () => infoBox.style.display = 'block';
+
 // Handle menu click
-const menuClick = () => menuButEl.addEventListener('click', openMenu)
+const menuClick = () => menuButEl.addEventListener('click', openMenu);
+menuClick();
+
+// Close menu on click of X
+const closeMenu = () => infoBox.style.display = 'none';
+
+// Handle close click
+const closeClick = () => closeButEl.addEventListener('click', closeMenu);
+closeClick();
