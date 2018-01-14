@@ -45,18 +45,22 @@ body {
     top: 0;
     right: 0;
     z-index: 2;
-    display: none;
     transition: background-color 0.5s ease;
     color: #ffffff;
+
+    /* display: none; */
+    opacity: 0.5;
 }
 
 .slide-in .close {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 35px;
+    right: 23px;
     color: #ffffff;
-    opacity: 1;
     font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
 }
 
 .close-info {
@@ -80,7 +84,7 @@ h1 {
     border-right: .25em solid #f92672; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    animation: typing 1.5s steps(40, end), blink-caret .75s step-end infinite;
+    animation: typing 1s steps(40, end), blink-caret .75s step-end infinite;
 
     width: 300px;
     font-size: 2rem;
@@ -104,7 +108,6 @@ p {
 }
 
 .form-control {
-    font-size: 1rem;
     border-radius: .15rem;
 }
 
@@ -176,12 +179,12 @@ No media query since this is the default in Bootstrap */
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    input[type=submit] {
-        /* position: relative;
+    /* input[type=submit] {
+        position: relative;
         height: 10rem;
         z-index: 1;
-        width: auto; */
-    }
+        width: auto;
+    } */
 }
 
 /* Large devices (desktops, 992px and up) */
