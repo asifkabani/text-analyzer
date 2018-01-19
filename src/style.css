@@ -104,6 +104,10 @@ p {
     font-size: 1rem;
 }
 
+.hidden {
+    display: none;
+}
+
 .form-control {
     border-radius: .15rem;
 }
