@@ -13,6 +13,7 @@ const infoBox = document.getElementById('js-info');
 const closeButEl = document.getElementById('js-close');
 const txtEl = document.getElementById('js-txt');
 const aboutTxt = document.getElementById('js-about');
+const unhideAria = document.getElementsByTagName('span')[0];
 
 // Remove non-alphanumerice characters and spaces from user input.
 const removeNonAlpha = (string) => string.toLowerCase().replace(/[^a-z0-9-]+/g, " ").trim();
@@ -73,6 +74,7 @@ handleSubmit();
 
 // Open menu on click
 const openMenu = () => {
+    unhideAria.setAttribute('aria-hidden', false);
     txtEl.style.display = 'none';
     infoBox.style.display = 'block';
     aboutTxt.style.display = 'block';

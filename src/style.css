@@ -118,12 +118,12 @@ textarea.form-control {
 
 output.form-control {
     background: #5c0e2b;
-    border: none;
+    border-color: #770730;
     color: #f92672;
     text-align: center;
 }
 
-input[type=submit] {
+.btn-primary {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -131,11 +131,20 @@ input[type=submit] {
     height: 6rem;
     z-index: 1;
     background-color: #f92672;
-    border: none;
+    border-color: #f96c9f;
     font-size: 2rem;
     letter-spacing: .25rem;
     text-transform: uppercase;
     color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #af1e54;
+}
+
+.btn-primary:not([disabled]):not(.disabled):active {
+    background-color: #f92672;
+    border-color: #f96c9f;
 }
 
 label {
@@ -180,12 +189,9 @@ No media query since this is the default in Bootstrap */
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    /* input[type=submit] {
+    input[type=submit] {
         position: relative;
-        height: 10rem;
-        z-index: 1;
-        width: auto;
-    } */
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
