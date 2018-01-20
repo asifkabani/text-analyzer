@@ -91,6 +91,10 @@ const closeMenu = () => {
     aboutTxt.style.display = 'none';
 };
 
-// Handle close click
+// Handle close click with X
 const closeClick = () => closeButEl.addEventListener('click', closeMenu);
 closeClick();
+
+// Handle menu close on mobile (click on the background)
+const closeBg = () => infoBox.addEventListener('click', closeMenu);
+closeBg();
