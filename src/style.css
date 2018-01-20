@@ -185,17 +185,42 @@ label {
 No media query since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    input[type=submit] {
-        position: relative;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3rem;
+        width: 450px;
+    }
+    p {
+        font-size: 2rem;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 450px }
+    }
+    input[type=submit] {
+        position: relative;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .form-control {
+        font-size: 2rem;
+    }
+    label {
+        font-size: 1.3rem;
+    }
+    textarea.form-control {
+        height: 25rem;
+    }    
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
