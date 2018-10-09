@@ -18,9 +18,9 @@
   "author": "Asif Kabani",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
@@ -28,7 +28,7 @@
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.2",
+    "webpack-dev-server": "^3.1.9",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
